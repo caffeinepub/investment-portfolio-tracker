@@ -1,0 +1,85 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add sidebar icons for Aadhaar/PAN entry with inline input fields and auto-fetch",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add Aadhaar and PAN card icons to the sidebar with distinct visuals and clear labels",
+      "acceptanceCriteria": [
+        "Two icons appear in the application sidebar",
+        "One icon is labeled for Aadhaar card entry",
+        "One icon is labeled for PAN card entry",
+        "Icons are visually distinct from each other"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add sidebar navigation component that displays the Aadhaar icon (frontend/public/assets/generated/aadhaar-icon.dim_32x32.png) and PAN icon (frontend/public/assets/generated/pan-icon.dim_32x32.png) with click handlers to show inline input fields. Position the sidebar on the left side of the main layout and ensure icons are clearly labeled with text beneath each icon. Wire the click handlers to toggle state for showing/hiding inline input fields for each card type."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Display inline input fields for Aadhaar or PAN number entry when respective sidebar icons are clicked",
+      "acceptanceCriteria": [
+        "Clicking Aadhaar icon displays an inline input field for Aadhaar number",
+        "Clicking PAN icon displays an inline input field for PAN number",
+        "Input fields appear without page navigation or modal popups",
+        "Input fields include appropriate validation and formatting"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SidebarCardInput.tsx",
+          "operation": "create",
+          "description": "Create a reusable component that renders an inline input field for card number entry (Aadhaar or PAN). Include validation logic: Aadhaar must be 12 digits, PAN must be 10 alphanumeric characters in the format AAAAA9999A. Apply appropriate formatting as the user types. Display validation errors inline. Accept props for card type, value, onChange handler, and validation state. Use existing earth-tone styling from the design system and ensure the component integrates seamlessly into the sidebar layout without causing page navigation."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate the SidebarCardInput component into the sidebar layout. Show the Aadhaar input field when the Aadhaar icon is clicked and the PAN input field when the PAN icon is clicked. Manage state for both card numbers using React hooks. Ensure only one input field is visible at a time or allow both to be visible based on click state. Position the input fields directly adjacent to or below the respective icons within the sidebar area. Do not use modals or navigate away from the current page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Automatically fetch and display all Aadhaar and PAN linked holdings when both valid card numbers are entered",
+      "acceptanceCriteria": [
+        "Holdings are automatically fetched when both valid Aadhaar and PAN numbers are entered",
+        "All linked investments are retrieved from the backend",
+        "Holdings display immediately after successful fetch",
+        "User receives feedback during the fetching process"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a React Query mutation hook for automatically triggering the SoA holdings fetch when both valid Aadhaar and PAN numbers are entered. The hook should call the backend capability for fetching holdings and invalidate the investments cache upon success. Include loading state and error handling. Expose the mutation trigger and status to consuming components."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Implement useEffect logic that watches the Aadhaar and PAN input states. When both card numbers are valid (12-digit Aadhaar and 10-character PAN in correct format), automatically trigger the holdings fetch mutation from useQueries.ts. Display a loading spinner or progress indicator in the sidebar during the fetch operation. Show success feedback (e.g., toast notification or inline message) when holdings are successfully retrieved and displayed. Handle errors gracefully with user-friendly error messages. Ensure the user profile is updated with the entered Aadhaar and PAN numbers by calling saveCallerUserProfile with the updated UserProfile containing aadhaarNumber and panNumber fields."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add a manual fetch button to trigger holdings retrieval on demand after card numbers are entered",
+      "acceptanceCriteria": [
+        "A fetch button is visible after Aadhaar and PAN numbers are entered",
+        "Clicking the button triggers holdings retrieval",
+        "Button shows loading state during fetch operation",
+        "Button is disabled if required card numbers are missing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a 'Fetch Holdings' button in the sidebar below the card input fields. The button should be disabled when either Aadhaar or PAN number is missing or invalid. When clicked, manually trigger the same holdings fetch mutation used for automatic fetching in REQ-3. Display a loading spinner inside the button during the fetch operation and disable the button while loading. Show the button text as 'Fetching...' during the operation. Ensure the button uses earth-tone styling consistent with the existing design system and is positioned clearly within the sidebar layout."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-two-separate-icons-to-the-sidebar-one-for-aadhaar-card-entry-and-one-for-pan-card-entry-icons-should-be-visually-distinct-and-clearly-labeled",
+      "featureTitle": "Add two separate icons to the sidebar: one for Aadhaar card entry and one for PAN card entry. Icons should be visually distinct and clearly labeled.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-when-either-sidebar-icon-is-clicked-display-inline-input-fields-for-entering-the-respective-card-number-aadhaar-or-pan-the-input-fields-should-appear-directly-in-the-sidebar-or-adjacent-area-without-navigating-away-from-the-current-page",
+      "featureTitle": "When either sidebar icon is clicked, display inline input fields for entering the respective card number (Aadhaar or PAN). The input fields should appear directly in the sidebar or adjacent area without navigating away from the current page.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-automatic-fetching-of-investment-holdings-as-soon-as-valid-aadhaar-and-pan-numbers-are-entered-the-system-should-retrieve-and-display-all-aadhaar-and-pan-linked-holdings-immediately-without-requiring-additional-user-action",
+      "featureTitle": "Implement automatic fetching of investment holdings as soon as valid Aadhaar and PAN numbers are entered. The system should retrieve and display all Aadhaar and PAN linked holdings immediately without requiring additional user action.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-manual-fetch-button-that-allows-users-to-trigger-the-holdings-retrieval-on-demand-this-button-should-be-available-after-aadhaar-and-pan-numbers-have-been-entered",
+      "featureTitle": "Add a manual fetch button that allows users to trigger the holdings retrieval on demand. This button should be available after Aadhaar and PAN numbers have been entered.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

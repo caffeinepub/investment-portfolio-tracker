@@ -1,0 +1,24 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T10:23:18.895Z",
+  "summary": "The diff shows implementation of sidebar icons for Aadhaar/PAN entry with inline input fields and manual fetch button. However, the automatic fetching mechanism on valid entry (REQ-3) is not clearly evident in the truncated diff, and the required icon image files are missing from the implementation.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Implement automatic fetching of investment holdings as soon as valid Aadhaar and PAN numbers are entered",
+      "reason": "The diff shows manual fetch functionality via useFetchSoaHoldings hook and buttons, but does not show automatic triggering when both valid Aadhaar and PAN numbers are entered. No useEffect or similar auto-trigger logic is visible in the truncated frontend/src/App.tsx",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.65,
+  "changed_files": [
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "project_state.json"
+  ]
+}

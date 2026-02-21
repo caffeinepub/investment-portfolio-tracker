@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Investment holdings fetcher web application with Aadhaar and PAN card integration",
+  "architectural_notes": [
+    "Sidebar navigation with two separate icons for Aadhaar and PAN card entry",
+    "Inline input fields appear when sidebar icons are clicked",
+    "Auto-fetch mechanism triggers on valid Aadhaar/PAN number entry",
+    "Manual fetch button provides user control over data retrieval"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Aadhaar card icon illustration in earth-tone emerald green style (aadhaar-icon.dim_32x32.png)\n- PAN card icon illustration in earth-tone warm gold style (pan-icon.dim_32x32.png)",
+  "existing_features": [
+    {
+      "id": "feature-add-two-separate-icons-to-the-sidebar-one-for-aadhaar-card-entry-and-one-for-pan-card-entry-icons-should-be-visually-distinct-and-clearly-labeled",
+      "title": "Add two separate icons to the sidebar: one for Aadhaar card entry and one for PAN card entry. Icons should be visually distinct and clearly labeled.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-either-sidebar-icon-is-clicked-display-inline-input-fields-for-entering-the-respective-card-number-aadhaar-or-pan-the-input-fields-should-appear-directly-in-the-sidebar-or-adjacent-area-without-navigating-away-from-the-current-page",
+      "title": "When either sidebar icon is clicked, display inline input fields for entering the respective card number (Aadhaar or PAN). The input fields should appear directly in the sidebar or adjacent area without navigating away from the current page.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-automatic-fetching-of-investment-holdings-as-soon-as-valid-aadhaar-and-pan-numbers-are-entered-the-system-should-retrieve-and-display-all-aadhaar-and-pan-linked-holdings-immediately-without-requiring-additional-user-action",
+      "title": "Implement automatic fetching of investment holdings as soon as valid Aadhaar and PAN numbers are entered. The system should retrieve and display all Aadhaar and PAN linked holdings immediately without requiring additional user action.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-manual-fetch-button-that-allows-users-to-trigger-the-holdings-retrieval-on-demand-this-button-should-be-available-after-aadhaar-and-pan-numbers-have-been-entered",
+      "title": "Add a manual fetch button that allows users to trigger the holdings retrieval on demand. This button should be available after Aadhaar and PAN numbers have been entered.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add sidebar icons for Aadhaar and PAN card entry with inline input fields",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement automatic fetching of investment holdings when Aadhaar/PAN numbers are entered",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add manual fetch button for user-controlled data retrieval",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Display all Aadhaar and PAN linked investment holdings immediately after fetch",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Investment Holdings Fetcher",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

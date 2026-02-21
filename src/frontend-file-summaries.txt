@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, authentication flow, sidebar with Aadhaar/PAN card icons and inline input fields for fetching investment holdings, profile setup dialog, and route definitions for dashboard, investment forms, and nominee management.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including user profiles, DigiLocker integration (Aadhaar, PAN, SoA holdings), investments (CRUD operations with folio number support), investment summaries, and nominee management with proper cache invalidation.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page displaying portfolio summary, investment cards in a grid layout, buttons to fetch SoA and Demat holdings when Aadhaar and PAN are linked, with improved empty state messaging that suggests fetching holdings when credentials are available.",
+  "frontend/src/components/PortfolioSummary.tsx": "Summary component showing total invested amount, current value, and overall gain/loss with color-coded indicators using formatINR for Indian Rupee formatting.",
+  "frontend/src/components/InvestmentCard.tsx": "Card component displaying individual investment details with category-specific icons, folio number display (if present), SEBI registration badge, gain/loss indicators, and edit/delete actions using formatINR for currency display.",
+  "frontend/src/components/DeleteInvestmentDialog.tsx": "Alert dialog component for confirming investment deletion with loading states.",
+  "frontend/src/components/AddInvestmentForm.tsx": "Form component for adding new investments with all 24 investment categories, folio number field, SEBI registration checkbox, and proper form validation.",
+  "frontend/src/components/EditInvestmentForm.tsx": "Form component for editing existing investments with all 24 investment categories, folio number field (pre-populated if exists), SEBI registration checkbox, and proper form validation.",
+  "frontend/src/pages/NomineeManagement.tsx": "Page for managing nominee information with add/update/remove functionality, three separate contact number input fields with contact icon, and principal ID validation.",
+  "frontend/src/index.css": "Global styles with earth tone OKLCH color system featuring deep emerald greens, warm golds, and neutral grays for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom earth tone color palette, professional font families (Inter, Merriweather, JetBrains Mono), and enhanced shadows for financial aesthetic.",
+  "frontend/src/utils/currency.ts": "Utility function for formatting numbers as Indian Rupees with proper INR symbol and Indian numbering system (lakhs and crores for large amounts).",
+  "frontend/src/main.tsx": "Application entry point with React Query provider and Sonner toast notifications for user feedback on DigiLocker operations and holdings fetch."
+}

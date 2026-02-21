@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Earth tone palette - Light mode */
+        --background: 0.98 0.005 85;
+        --foreground: 0.25 0.02 140;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 140;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 140;
+        
+        /* Deep emerald green as primary */
+        --primary: 0.45 0.12 160;
+        --primary-foreground: 0.98 0.005 85;
+        
+        /* Warm neutral gray */
+        --secondary: 0.92 0.01 85;
+        --secondary-foreground: 0.25 0.02 140;
+        
+        --muted: 0.95 0.01 85;
+        --muted-foreground: 0.55 0.02 140;
+        
+        /* Gold accent */
+        --accent: 0.88 0.08 75;
+        --accent-foreground: 0.25 0.02 140;
+        
+        /* Warm red for destructive */
+        --destructive: 0.55 0.20 25;
+        --destructive-foreground: 0.98 0.005 85;
+        
+        --border: 0.90 0.01 85;
+        --input: 0.90 0.01 85;
+        --ring: 0.45 0.12 160;
+        
+        /* Chart colors - earth tones */
+        --chart-1: 0.50 0.15 160;
+        --chart-2: 0.65 0.12 75;
+        --chart-3: 0.45 0.08 40;
+        --chart-4: 0.55 0.10 180;
+        --chart-5: 0.70 0.15 65;
+    }
+
+    .dark {
+        /* Earth tone palette - Dark mode */
+        --background: 0.18 0.02 140;
+        --foreground: 0.95 0.01 85;
+        
+        --card: 0.22 0.02 140;
+        --card-foreground: 0.95 0.01 85;
+        
+        --popover: 0.20 0.02 140;
+        --popover-foreground: 0.95 0.01 85;
+        
+        /* Lighter emerald for dark mode */
+        --primary: 0.65 0.15 160;
+        --primary-foreground: 0.18 0.02 140;
+        
+        --secondary: 0.28 0.02 140;
+        --secondary-foreground: 0.95 0.01 85;
+        
+        --muted: 0.30 0.02 140;
+        --muted-foreground: 0.65 0.02 140;
+        
+        /* Brighter gold for dark mode */
+        --accent: 0.75 0.12 75;
+        --accent-foreground: 0.18 0.02 140;
+        
+        --destructive: 0.60 0.22 25;
+        --destructive-foreground: 0.95 0.01 85;
+        
+        --border: 0.35 0.02 140;
+        --input: 0.35 0.02 140;
+        --ring: 0.65 0.15 160;
+        
+        /* Chart colors - adjusted for dark mode */
+        --chart-1: 0.60 0.18 160;
+        --chart-2: 0.70 0.15 75;
+        --chart-3: 0.55 0.12 40;
+        --chart-4: 0.65 0.15 180;
+        --chart-5: 0.75 0.18 65;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

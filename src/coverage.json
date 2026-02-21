@@ -1,0 +1,75 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T10:23:18.898Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Add two separate icons to the sidebar: one for Aadhaar card entry and one for PAN card entry. Icons should be visually distinct and clearly labeled.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "When either sidebar icon is clicked, display inline input fields for entering the respective card number (Aadhaar or PAN). The input fields should appear directly in the sidebar or adjacent area without navigating away from the current page.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SidebarCardInput.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Implement automatic fetching of investment holdings as soon as valid Aadhaar and PAN numbers are entered. The system should retrieve and display all Aadhaar and PAN linked holdings immediately without requiring additional user action.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add a manual fetch button that allows users to trigger the holdings retrieval on demand. This button should be available after Aadhaar and PAN numbers have been entered.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/aadhaar-icon.dim_32x32.png",
+    "frontend/public/assets/generated/pan-icon.dim_32x32.png",
+    "frontend/src/App.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
